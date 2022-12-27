@@ -1,0 +1,446 @@
+/**RESET**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+/**---------------ESTILOS GENERALES--------------**/
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #0455A5;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font: weight 500;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F88C7E;
+}
+
+a:visited,
+a:link {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+
+
+/**----------------------------GRILLA--------------------------**/
+/* DESKTOP  FIRST */
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas:
+        "header "
+        "main "
+        "footer ";
+
+}
+
+/**----------------------------  HEADER --------------------------**/
+
+header {
+    height: 10vh;
+    grid-area: header;
+    background-color: #EDEDEE;
+    border-bottom: #14015B 2px solid;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+header .logo {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+nav {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    height: 100%;
+}
+
+.navbar {
+    display: none;
+}
+
+
+ul {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    text-decoration: none;
+    color: #0455A5;
+}
+
+ul li {
+    padding: 25px;
+}
+
+.botoncotizar {
+    display: block;
+    color: #EDEDEE;
+    padding-left: 25px;
+    padding-right: 40px;
+    background-color: #F88C7E;
+}
+
+.botoncotizar a {
+    color: #EDEDEE;
+}
+
+
+/**---------------------------- MAIN --------------------------**/
+main {
+    height: 75vh;
+    grid-area: main;
+    background-color: #fff;
+
+}
+
+/**   ---  QUIEN SOY SLIDE  ---**/
+#slide {
+    width: 100%;
+    height: 32vh;
+    background-image: url(../asset/img/slide_home.jpg);
+    background-size: cover;
+    border-bottom: #F88C7E 5px solid;
+}
+
+
+/**   ---  QUIEN SOY  TEXTO ---**/
+#quiensoy {
+    height: 43vh;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+#quiensoy .imgizq {
+    align-items: center;
+    padding: 1%;
+}
+
+
+#quiensoy .texto {
+    align-self: center;
+    padding: 1%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #14015B;
+}
+
+
+/**   ---  SEGUROS CATEGORIAS   ---**/
+#categorias {
+    height: 45vh;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4.5%;
+    border-bottom: #F88C7E 5px solid;
+}
+
+#categorias h1 {
+    padding-bottom: 2%;
+    color: #0455A5;
+    text-align: center;
+}
+
+#categorias h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #14015B;
+}
+
+#figuras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.figuraborde {
+    padding-right: 25px;
+    margin-bottom: 35px;
+    border-right: #F88C7E 3px solid;
+    transform: scale(1, 1);
+}
+
+.figuraborde img:hover {
+    transform: scale(1.1, 1.1);
+    transform: translate(0px, -15px);
+    transition: all 1s;
+}
+
+figure i {
+    margin-left: 40%;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #F88C7E
+}
+
+.figuraborde {
+    width: 16%;
+}
+
+/**   ---  SEGUROS NOVEDADES   ---**/
+
+#novedades {
+    height: 30vh;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    background-color: #0455A5;
+}
+
+#novedades h2 {
+    color: #F88C7E;
+}
+
+#novedades h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 2%;
+}
+
+#novedades p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/**   ---  ficha SEGUROS  ---**/
+
+.botoncoti {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #F88C7E;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: 2%;
+}
+
+.botoncoti h1 {
+    color: #EDEDEE;
+}
+
+.botonvolver {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #EDEDEE;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.botonvolver h1 {
+    color: #14015B;
+}
+
+
+
+/**---------------------------- FOOTER --------------------------**/
+footer {
+    height: 15vh;
+    width: 100%;
+    grid-area: footer;
+    background-color: #14015B;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .pie {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .pie li {
+    justify-items: center;
+    align-items: center;
+    /* padding-left: 2%;
+padding-right: 2%; */
+}
+
+footer .redes {
+    display: flex;
+}
+
+footer .pie li h2 {
+    color: #F88C7E;
+}
+
+footer .pie p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer i {
+    display: flex;
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 4px;
+}
+
+.borde_pie {
+    border-left: #F88C7E 2px solid;
+    margin-left: 5%;
+}
+
+.what {
+    position: fixed;
+    bottom: 5px;
+    right: 28px;
+    color: #79c000;
+    font-size: 4rem;
+    z-index: 50;
+}
+
+/**----------------------------MEDIA QUERIES --------------------------**/
+
+
+@media (max-width:320px) {
+
+    body {
+
+        height: 250vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 8fr 1fr;
+        grid-template-areas:
+            "header"
+            "navbar"
+            "main "
+            "footer ";
+
+    }
+
+    header {
+        height: 20vh;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    header .logo {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        display: inline-block;
+        padding-left: 5%;
+        padding-right: 5%;
+        height: 25vh;
+    }
+
+    .navbar li {
+        display: block;
+    }
+
+    main {
+        height: 50vh;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #quiensoy {
+        flex-direction: column;
+    }
+
+    #quiensoy .imgizq {
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+    }
+
+    #quiensoy .texto {
+        align-self: center;
+        padding: 2%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: #14015B;
+    }
+
+    footer {
+        height: 60vh;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    footer .pie {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .borde_pie {
+        border-left: #F88C7E 2px solid;
+        margin-left: 2%;
+    }
+
+    .what {
+        display: none;
+    }
+}
