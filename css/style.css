@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
 }
 
 /**---------------ESTILOS GENERALES--------------**/
@@ -76,32 +74,26 @@ header {
     padding-right: 10%;
     display: flex;
     flex-wrap: wrap;
-
-
-
 }
 
 header .logo {
-    width: 25%;
+    width: 35%;
     display: flex;
     justify-content: flex-start;
     height: 100%;
+    
 }
 
 nav {
-    width: 75%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
     height: 100%;
+  
 }
 
-.navbar {
-    display: none;
-}
-
-
-ul {
+.navheader {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -110,7 +102,13 @@ ul {
     color: #0455A5;
 }
 
-ul li {
+.navheader li {
+    padding: 25px 15px;
+
+}
+
+
+.pie li {
     padding: 25px;
 }
 
@@ -184,7 +182,7 @@ main {
 }
 
 #categorias h1 {
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     color: #0455A5;
     text-align: center;
 }
@@ -260,7 +258,7 @@ figure i {
 
 /**   ---  ficha SEGUROS  ---**/
 
-.botoncoti {
+/* .botoncoti {
     display: inline-block;
     padding-left: 25px;
     padding-right: 25px;
@@ -285,7 +283,7 @@ figure i {
 
 .botonvolver h1 {
     color: #14015B;
-}
+} */
 
 
 
@@ -311,8 +309,8 @@ footer .pie {
 footer .pie li {
     justify-items: center;
     align-items: center;
-    /* padding-left: 2%;
-padding-right: 2%; */
+    padding-left: 2%;
+padding-right: 2%;
 }
 
 footer .redes {
@@ -333,12 +331,12 @@ footer i {
     display: flex;
     color: #fff;
     font-size: 2rem;
-    margin-right: 4px;
+    margin-right: 3px;
 }
 
 .borde_pie {
     border-left: #F88C7E 2px solid;
-    margin-left: 5%;
+    margin-left: 4%;
 }
 
 .what {
@@ -353,94 +351,116 @@ footer i {
 /**----------------------------MEDIA QUERIES --------------------------**/
 
 
-@media (max-width:320px) {
+@media (max-width:768px) {
 
     body {
-
-        height: 250vh;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 8fr 1fr;
-        grid-template-areas:
-            "header"
-            "navbar"
-            "main "
-            "footer ";
-
+        height: 200vh;
     }
 
     header {
-        height: 20vh;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    header .logo {
-        width: 60%;
+        height: 21vh;
+        padding-left: 3%;
+        padding-right: 3%;
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
-    nav {
-        display: none;
-    }
+.logo  {
+display:flex;
+justify-content: center;
+align-items: center;
+padding-right: 5px;
+}
 
-    .navbar {
-        grid-area: navbar;
-        display: inline-block;
-        padding-left: 5%;
-        padding-right: 5%;
-        height: 25vh;
+.navheader  {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-right: #F88C7E solid 3x;
+}
+    .navheader li {
+        padding: 5px 5px;
     }
-
-    .navbar li {
-        display: block;
-    }
-
     main {
-        height: 50vh;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
+    /**   --- QUIEN SOY---**/
     #quiensoy {
+        height: 100vh;
+        display:flex;
         flex-direction: column;
-    }
-
-    #quiensoy .imgizq {
         justify-content: center;
-        align-items: center;
-        padding: 2%;
     }
 
     #quiensoy .texto {
         align-self: center;
-        padding: 2%;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: #14015B;
     }
+.imgizq { 
+        align-content: center;
+        justify-content: center;}
 
-    footer {
-        height: 60vh;
-        padding-left: 5%;
-        padding-right: 5%;
+
+ /**   --- SEGUROS---**/
+ #categorias {
+    height: 130vh;
+margin-bottom: 5%;}
+ 
+    #figuras {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+    
+    .figuraborde {
+        padding-right: 35px;
+        margin-bottom: 35px;
+        border-right: #F88C7E 3px solid;
+        transform: scale(1, 1);
+    }
+    
+    .figuraborde img:hover {
+        transform: scale(1.1, 1.1);
+        transform: translate(0px, -15px);
+        transition: all 1s;
+    }
+    
+    figure i {
+        margin-left: 40%;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #F88C7E
+    }
+    
+    .figuraborde {
+        width: 45%;
     }
 
+    #novedades {
+        display: none;}
+
+
+ /**   ---FOOTER---**/
+    
+    footer {
+        height: 55vh;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
 
     footer .pie {
         flex-direction: column;
-        flex-wrap: wrap;
+       
     }
-
     .borde_pie {
-        border-left: #F88C7E 2px solid;
+        border: none;
         margin-left: 2%;
     }
 
-    .what {
-        display: none;
-    }
+    
 }
