@@ -10,7 +10,7 @@
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1.6rem;
     color: #0455A5;
     margin-bottom: 10px;
 }
@@ -18,7 +18,7 @@ h1 {
 h2 {
     font-family: 'Roboto', sans-serif;
     font: weight 500;
-    font-size: 19px;
+    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
@@ -50,14 +50,13 @@ p {
 /* DESKTOP  FIRST */
 
 body {
-    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-        "header "
+        "header"
         "main "
         "footer ";
 
@@ -66,51 +65,46 @@ body {
 /**----------------------------  HEADER --------------------------**/
 
 header {
-    height: 10vh;
     grid-area: header;
     background-color: #EDEDEE;
     border-bottom: #14015B 2px solid;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    flex-basis: auto;
 }
 
 header .logo {
-    width: 35%;
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    
+    width: 20%;
+
 }
 
-nav {
-    width: 65%;
+nav .ulheader {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    height: 100%;
-  
+    justify-content: space-around;
 }
 
-.navheader {
+.ulheader {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 23px;
     text-decoration: none;
-    color: #0455A5;
+    flex-wrap: wrap;
+    color: #14015B;
 }
-
-.navheader li {
+.ulheader li {
     padding: 25px 15px;
-
 }
 
-
-.pie li {
-    padding: 25px;
+.ulheader li:hover {
+    color: #F88C7E;
 }
+
 
 .botoncotizar {
     display: block;
@@ -124,10 +118,9 @@ nav {
     color: #EDEDEE;
 }
 
-
 /**---------------------------- MAIN --------------------------**/
 main {
-    height: 75vh;
+
     grid-area: main;
     background-color: #fff;
 
@@ -136,53 +129,57 @@ main {
 /**   ---  QUIEN SOY SLIDE  ---**/
 #slide {
     width: 100%;
-    height: 32vh;
+    height: 30vh;
     background-image: url(../asset/img/slide_home.jpg);
     background-size: cover;
     border-bottom: #F88C7E 5px solid;
 }
 
-
 /**   ---  QUIEN SOY  TEXTO ---**/
 #quiensoy {
-    height: 43vh;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
 
 }
 
 #quiensoy .imgizq {
+    width: 45%;
+    height: 40vh;
+    background-image: url(../asset/img/nahuellobo2.jpg);
+    background-size: cover;
     align-items: center;
-    padding: 1%;
+    border: #14015B 2px solid;
 }
 
-
 #quiensoy .texto {
-    align-self: center;
-    padding: 1%;
+    width: 45%;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
     color: #14015B;
+    border: #14015B 2px solid;
 }
-
 
 /**   ---  SEGUROS CATEGORIAS   ---**/
 #categorias {
-    height: 45vh;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 4.5%;
+    padding-top: 3%;
     border-bottom: #F88C7E 5px solid;
 }
 
 #categorias h1 {
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     color: #0455A5;
     text-align: center;
 }
@@ -196,15 +193,22 @@ main {
 }
 
 #figuras {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-    margin-bottom: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.figuraborde {
-    padding-right: 25px;
-    margin-bottom: 35px;
+.figuraborde  {
+    display: flex;
+    flex-basis: auto;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
     border-right: #F88C7E 3px solid;
     transform: scale(1, 1);
 }
@@ -222,19 +226,16 @@ figure i {
     color: #F88C7E
 }
 
-.figuraborde {
-    width: 16%;
-}
-
 /**   ---  SEGUROS NOVEDADES   ---**/
 
 #novedades {
-    height: 30vh;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     background-color: #0455A5;
+    border-color: #e60096 solid 2px;
 }
 
 #novedades h2 {
@@ -245,18 +246,92 @@ figure i {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 18px;
     padding-bottom: 2%;
 }
 
 #novedades p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: #ffffff;
 }
 
-/**   ---  ficha SEGUROS  ---**/
+/**---SEGURO HOGAR---**/
+
+#slidehogar {
+    width: 100%;
+    height: 30vh;
+    background-image: url(../asset/img/slide_hogar.jpg);
+    background-size: cover;
+    background-position: top right;
+    border-bottom: #F88C7E 5px solid;
+}
+
+#hogar{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+#hogar .imgizqhogar {
+    width: 35%;
+    height: 40vh;
+    background-image: url(../asset/img/segurohogar.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    align-items: center;
+    border: #14015B 2px solid;
+}
+#hogar .texto {
+    width: 55%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #14015B;
+    border: #14015B 2px solid;
+}
+#hogar .texto h1 { 
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+/**---Accordeon---**/
+/* .acordeon { margin-top: 2%;
+    margin-bottom: 2%;}
+
+section a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: block;
+    text-align: left;
+    padding: 5px;
+    background-color: #0455A5;
+    color: white;
+  }
+  section p {
+    overflow: hidden;
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-height: 0;
+    text-align: justify;
+
+  }
+  
+  section:target p {
+    max-height: 150px;
+    padding: 10px;
+  } */
 
 /* .botoncoti {
     display: inline-block;
@@ -284,19 +359,14 @@ figure i {
 .botonvolver h1 {
     color: #14015B;
 } */
-
-
-
 /**---------------------------- FOOTER --------------------------**/
 footer {
-    height: 15vh;
     width: 100%;
     grid-area: footer;
+    border-top: #F88C7E 5px solid;
     background-color: #14015B;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 1%;
-    padding-bottom: 1%;
     display: flex;
     flex-direction: row;
 }
@@ -304,13 +374,16 @@ footer {
 footer .pie {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
 footer .pie li {
     justify-items: center;
     align-items: center;
-    padding-left: 2%;
-padding-right: 2%;
+    padding: 20px;
+
 }
 
 footer .redes {
@@ -336,7 +409,6 @@ footer i {
 
 .borde_pie {
     border-left: #F88C7E 2px solid;
-    margin-left: 4%;
 }
 
 .what {
@@ -348,119 +420,161 @@ footer i {
     z-index: 50;
 }
 
-/**----------------------------MEDIA QUERIES --------------------------**/
-
-
+/**------------------------------- MEDIA QUERIES - tablets  -----------------------------------**/
 @media (max-width:768px) {
 
-    body {
-        height: 200vh;
-    }
-
+/**---header--**/
     header {
-        height: 21vh;
-        padding-left: 3%;
-        padding-right: 3%;
-        display: flex;
+        padding-top: 3%;
+        padding-left: 4%;
+        padding-right: 4%;
     }
-
-.logo  {
-display:flex;
-justify-content: center;
-align-items: center;
-padding-right: 5px;
-}
-
-.navheader  {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border-right: #F88C7E solid 3x;
-}
-    .navheader li {
-        padding: 5px 5px;
+    header .logo {
+        width: 30%;
     }
-    main {
-        padding-left: 0;
-        padding-right: 0;
+    nav {
+        width: 100%;
     }
-
-    /**   --- QUIEN SOY---**/
-    #quiensoy {
-        height: 100vh;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
+    nav .ulheader {
+        margin-top: 25px;
     }
-
-    #quiensoy .texto {
-        align-self: center;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: #14015B;
-    }
-.imgizq { 
-        align-content: center;
-        justify-content: center;}
-
-
- /**   --- SEGUROS---**/
- #categorias {
-    height: 130vh;
-margin-bottom: 5%;}
- 
-    #figuras {
-        display: flex;
-        flex-wrap: wrap;
+    .ulheader li {
         justify-content: space-around;
-        margin-bottom: 5px;
-    }
-    
-    .figuraborde {
-        padding-right: 35px;
-        margin-bottom: 35px;
-        border-right: #F88C7E 3px solid;
-        transform: scale(1, 1);
-    }
-    
-    .figuraborde img:hover {
-        transform: scale(1.1, 1.1);
-        transform: translate(0px, -15px);
-        transition: all 1s;
-    }
-    
-    figure i {
-        margin-left: 40%;
-        font-weight: 500;
-        font-size: 1.8rem;
-        color: #F88C7E
-    }
-    
-    .figuraborde {
-        width: 45%;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 
-    #novedades {
-        display: none;}
+/**---main --**/
 
-
- /**   ---FOOTER---**/
-    
-    footer {
-        height: 55vh;
-        padding-left: 2%;
-        padding-right: 2%;
+    #slide {
+        height: 40vh;
     }
-
-    footer .pie {
+                /**---QUIEN SOY---**/
+    #quiensoy {
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 3%;
+        padding-bottom: 3%;
         flex-direction: column;
-       
     }
-    .borde_pie {
-        border: none;
-        margin-left: 2%;
+    #quiensoy .imgizq {
+        width: 100%;
+    }
+    #quiensoy .texto {
+        width: 100%;
+        font-size: 1.6rem;
+        color: #14015B;
+        border: #14015B 2px solid;
+    }
+            /**--- SEGUROS CATEGORIAS--**/
+
+    #categorias { 
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 3%; }    
+            
+    #figuras {
+        padding-bottom: 3%;
+        justify-content: center;
+            }
+    .figuraborde  {
+        padding-right: 3%;
+        margin-left: 3%;
+            }
+
+/**---- footer ---**/
+    footer {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    footer .pie {
+        display: flex;
+        flex-direction: column;
+    }
+   footer .pie li {
+        align-items: center;
+        padding: 15px;
+    }
+}
+/**------------------------------- MEDIA QUERIES - MOBILE L 425  -----------------------------------**/
+@media (max-width:425px) {
+
+/**---header--**/
+    header { padding-bottom: 3%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    header .logo {
+        width: 50%;
+    }
+    nav .ulheader {
+        flex-direction: column;
+    }
+    .ulheader li  {
+        padding: 10px;
+        margin: 0%;
+        margin-bottom: 1%;
+    }   
+    .ulheader .botoncomun {
+        background-color:#0455A5 ;
+    }
+    .ulheader .botoncomun a {
+       color: #EDEDEE;
+    }
+    .ulheader .botoncomun a:hover {
+        color:#F88C7E;
+     }
+/**---main --**/
+     #slide {
+        height: 33vh;
+        background-position: center top;
+    }
+            /**---QUIEN SOY---**/
+    #quiensoy .texto {
+        font-size: 1.4rem;
     }
 
+            /**--- SEGUROS CATEGORIAS --**/
+            .figuraborde  {
+                padding-right: 2%;
+                margin-left: 3%;
+        
+                    }
+
+/**---- footer ---**/
     
+    .pie li  {
+        padding: 10px;
+        margin: 0%;
+        margin-bottom: 1%;
+    }   
+    .ssn img {
+        width: 85%;
+    } 
 }
+/**------------------------------- MEDIA QUERIES - MOBILE L 320  -----------------------------------**/
+@media (max-width:320px) {
+    /**--- SEGUROS CATEGORIAS --**/
+    
+    #categorias { 
+        padding-left: 2%;
+        padding-right: 2%;}  
+        
+        #figuras {
+            padding-bottom: 4%;
+                }
+        .figuraborde  {
+            padding-right: 2%;
+            margin-left: 2%;
+            width: 42%;
+                }
+ 
+
+/**---- footer ---**/
+    .ssn img {
+        width: 70%;
+    } 
+
+
+}
+
